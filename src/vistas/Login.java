@@ -5,6 +5,15 @@
  */
 package vistas;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mitch
@@ -43,8 +52,14 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 0, 0)), new javax.swing.border.MatteBorder(null)));
 
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
         jButton1.setText("Validar");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -114,10 +129,89 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        PVotaciones pvo= new  PVotaciones();
-        pvo.setVisible(true);
-        dispose();
+        File arc = new File("C:\\Industrial");
+        if (arc.exists() == false) {
+            arc.mkdir();
+        }
+        String numero = "C:\\Industrial\\BaseDeDatos.txt";
+        File archivo = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+        FileWriter fichero = null;
+        PrintWriter pw = null;
+        String linea = "";
+        String finali[] = new String[10000];
+        boolean validation = false;
+        try {
+            archivo = new File(numero);
+            fr = new FileReader(archivo);
+            br = new BufferedReader(fr);
+            int num = 0;
+            while (true) {
+                linea = br.readLine();
+                if (linea == null) {
+                    break;
+                }
+                String tamporal[] = linea.split(" ");
+                if (tamporal[0].equals(jTextField1.getText())) {
+                    if (tamporal[1].equals("1")) {
+                        finali[num] = tamporal[0] + " " + "2";
+                        validation = true;
+                    } else {
+                        finali[num] = tamporal[0] + " " + tamporal[1];
+                    }
+                } else {
+                    finali[num] = tamporal[0] + " " + tamporal[1];
+                }
+                tamporal = null;
+                num++;
+            }
+            br.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (null != fr) {
+                    fr.close();
+                }
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        }
+
+        try {
+            fichero = new FileWriter(numero);
+            pw = new PrintWriter(fichero);
+            for (int i = 0; i < finali.length; i++) {
+                if (finali[i] != null) {
+                    pw.append(finali[i]);
+                    pw.println();
+                }
+            }
+            fichero.close();
+        } catch (Exception e) {
+            System.out.println("sdklsdmñls");
+        } finally {
+            try {
+                if (null != fichero) {
+                    fichero.close();
+                }
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        }
+        if (validation) {
+            PVotaciones pvo = new PVotaciones();
+            pvo.setVisible(true);
+            dispose();
+        } else {
+            JOptionPane.showMessageDialog(null, "Usted no fué encontrado en nuestra base de datos, o su voto ya fué recibido");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,16 +227,21 @@ public class Login extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
