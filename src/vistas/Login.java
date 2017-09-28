@@ -140,13 +140,14 @@ public class Login extends javax.swing.JFrame {
         FileWriter fichero = null;
         PrintWriter pw = null;
         String linea = "";
-        String finali[] = new String[10000];
+        String finali[] = new String[100000];
         boolean validation = false;
         try {
             archivo = new File(numero);
             fr = new FileReader(archivo);
             br = new BufferedReader(fr);
             int num = 0;
+            
             while (true) {
                 linea = br.readLine();
                 if (linea == null) {
@@ -178,7 +179,9 @@ public class Login extends javax.swing.JFrame {
                 e2.printStackTrace();
             }
         }
-
+        //hasta aquí es la lactra
+        
+        //escritura
         try {
             fichero = new FileWriter(numero);
             pw = new PrintWriter(fichero);
@@ -190,7 +193,7 @@ public class Login extends javax.swing.JFrame {
             }
             fichero.close();
         } catch (Exception e) {
-            System.out.println("sdklsdmñls");
+            System.out.println("hola");
         } finally {
             try {
                 if (null != fichero) {
