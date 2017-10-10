@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author 
+ * @author
  */
 public class Login extends javax.swing.JFrame {
 
@@ -143,87 +143,94 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        File arc = new File("C:\\Industrial");
-        if (arc.exists() == false) {
-            arc.mkdir();
-        }
-        String numero = "C:\\Industrial\\BaseDeDatos.txt";
-        File archivo = null;
-        FileReader fr = null;
-        BufferedReader br = null;
-        FileWriter fichero = null;
-        PrintWriter pw = null;
-        String linea = "";
-        String finali[] = new String[100000];
-        boolean validation = false;
         try {
-            archivo = new File(numero);
-            fr = new FileReader(archivo);
-            br = new BufferedReader(fr);
-            int num = 0;
-            
-            while (true) {
-                linea = br.readLine();
-                if (linea == null) {
-                    break;
-                }
-                String tamporal[] = linea.split(" ");
-                if (tamporal[0].equals(jTextField1.getText())) {
-                    if (tamporal[1].equals("1")) {
-                        finali[num] = tamporal[0] + " " + "2";
-                        validation = true;
-                    } else {
-                        finali[num] = tamporal[0] + " " + tamporal[1];
+            File arc = new File("C:\\Industrial");
+            if (arc.exists() == false) {
+                arc.mkdir();
+
+                String numero = "C:\\Industrial\\BaseDeDatos.txt";
+                File archivo = null;
+                FileReader fr = null;
+                BufferedReader br = null;
+                FileWriter fichero = null;
+                PrintWriter pw = null;
+                String linea = "";
+                String finali[] = new String[100000];
+                boolean validation = false;
+                try {
+                    archivo = new File(numero);
+                    fr = new FileReader(archivo);
+                    br = new BufferedReader(fr);
+                    int num = 0;
+
+                    while (true) {
+                        linea = br.readLine();
+                        if (linea == null) {
+                            break;
+                        }
+                        String tamporal[] = linea.split(" ");
+                        if (tamporal[0].equals(jTextField1.getText())) {
+                            if (tamporal[1].equals("1")) {
+                                finali[num] = tamporal[0] + " " + "2";
+                                validation = true;
+                            } else {
+                                finali[num] = tamporal[0] + " " + tamporal[1];
+                            }
+                        } else {
+                            finali[num] = tamporal[0] + " " + tamporal[1];
+                        }
+                        tamporal = null;
+                        num++;
                     }
-                } else {
-                    finali[num] = tamporal[0] + " " + tamporal[1];
+                    br.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        if (null != fr) {
+                            fr.close();
+                        }
+                    } catch (Exception e2) {
+                        e2.printStackTrace();
+                    }
                 }
-                tamporal = null;
-                num++;
-            }
-            br.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (null != fr) {
-                    fr.close();
-                }
-            } catch (Exception e2) {
-                e2.printStackTrace();
-            }
-        }
-        //hasta aquí es la lactra
-        
-        //escritura
-        try {
-            fichero = new FileWriter(numero);
-            pw = new PrintWriter(fichero);
-            for (int i = 0; i < finali.length; i++) {
-                if (finali[i] != null) {
-                    pw.append(finali[i]);
-                    pw.println();
-                }
-            }
-            fichero.close();
-        } catch (Exception e) {
-            System.out.println("hola");
-        } finally {
-            try {
-                if (null != fichero) {
+                //hasta aquí es la lactra
+
+                //escritura
+                try {
+                    fichero = new FileWriter(numero);
+                    pw = new PrintWriter(fichero);
+                    for (int i = 0; i < finali.length; i++) {
+                        if (finali[i] != null) {
+                            pw.append(finali[i]);
+                            pw.println();
+                        }
+                    }
                     fichero.close();
+                } catch (Exception e) {
+                    System.out.println("hola");
+                } finally {
+                    try {
+                        if (null != fichero) {
+                            fichero.close();
+                        }
+                    } catch (Exception e2) {
+                        e2.printStackTrace();
+                    }
                 }
-            } catch (Exception e2) {
-                e2.printStackTrace();
+                if (validation) {
+                    PVotaciones pvo = new PVotaciones();
+                    pvo.setVisible(true);
+                    dispose();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Usted no fué encontrado en nuestra base de datos, o su voto ya fué recibido");
+                }
+
             }
+        } catch (Exception io) {
+            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
         }
-        if (validation) {
-            PVotaciones pvo = new PVotaciones();
-            pvo.setVisible(true);
-            dispose();
-        } else {
-            JOptionPane.showMessageDialog(null, "Usted no fué encontrado en nuestra base de datos, o su voto ya fué recibido");
-        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -232,13 +239,13 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        String pass= JOptionPane.showInputDialog(null, "Ingrese la contraseña de administrador: ");
-        if(!pass.isEmpty()){
-            if(!pass.equals("profesor12345")){
-                JOptionPane.showMessageDialog(null, "Codigo de seguridad incorrecto","Error",JOptionPane.WARNING_MESSAGE);
-            }else{
+        String pass = JOptionPane.showInputDialog(null, "Ingrese la contraseña de administrador: ");
+        if (!pass.isEmpty()) {
+            if (!pass.equals("profesor12345")) {
+                JOptionPane.showMessageDialog(null, "Codigo de seguridad incorrecto", "Error", JOptionPane.WARNING_MESSAGE);
+            } else {
                 dispose();
-                Profesores pr= new Profesores();
+                Profesores pr = new Profesores();
                 pr.setVisible(true);
             }
         }
