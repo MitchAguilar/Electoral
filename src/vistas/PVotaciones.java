@@ -7,10 +7,11 @@ package vistas;
 
 import java.net.URL;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author mitch
+ * @author 
  */
 public class PVotaciones extends javax.swing.JFrame {
 
@@ -19,19 +20,30 @@ public class PVotaciones extends javax.swing.JFrame {
      */
     public PVotaciones() {
         initComponents();
-        Imagen img = new Imagen("/Imagenes/descarga.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-        Imagen img1 = new Imagen("/Imagenes/descarga.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-        Imagen img2 = new Imagen("/Imagenes/descarga.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-        Imagen img3 = new Imagen("/Imagenes/descarga.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-        Imagen img4 = new Imagen("/Imagenes/descarga.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-        Imagen img5 = new Imagen("/Imagenes/descarga.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-        Imagen img6= new Imagen("/Imagenes/descarga.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-        jPanel3.add(img);
-        jPanel4.add(img1);
-        jPanel5.add(img2);
-        jPanel6.add(img3);
-        jPanel7.add(img4);
-        jPanel8.add(img5);
+        try {
+            Imagen img = new Imagen("/Imagenes/descarga.jpg", jPanel3.getWidth(), jPanel3.getHeight());
+            Imagen img1 = new Imagen("/Imagenes/descarga1.jpg", jPanel3.getWidth(), jPanel3.getHeight());
+            Imagen img2 = new Imagen("/Imagenes/descarga2.jpg", jPanel3.getWidth(), jPanel3.getHeight());
+            Imagen img3 = new Imagen("/Imagenes/descarga3.jpg", jPanel3.getWidth(), jPanel3.getHeight());
+            Imagen img4 = new Imagen("/Imagenes/descarga4.jpg", jPanel3.getWidth(), jPanel3.getHeight());
+            Imagen img5 = new Imagen("/Imagenes/descarga5.jpg", jPanel3.getWidth(), jPanel3.getHeight());
+            Imagen img6 = new Imagen("/Imagenes/descarga6.jpg", jPanel3.getWidth(), jPanel3.getHeight());
+            Imagen img7 = new Imagen("/Imagenes/descarga7.jpg", jPanel3.getWidth(), jPanel3.getHeight());
+            Imagen img9 = new Imagen("/Imagenes/panit.jpg", getWidth(), getHeight());
+
+            jPanel3.add(img);
+            jPanel4.add(img1);
+            jPanel5.add(img2);
+            jPanel6.add(img3);
+            jPanel7.add(img4);
+            jPanel8.add(img5);
+            jPanel9.add(img6);
+            jPanel10.add(img7);
+            add(img9);  
+        } catch (Exception io) {
+            JOptionPane.showMessageDialog(null, "Ha ocurrido un error, hay archivos faltanates");
+        }
+
         repaint();
         setResizable(false);
         setLocationRelativeTo(null);
@@ -175,34 +187,6 @@ public class PVotaciones extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jButton3)
-                .addGap(76, 76, 76)
-                .addComponent(jButton4)
-                .addGap(74, 74, 74)
-                .addComponent(jButton5)
-                .addGap(71, 71, 71)
-                .addComponent(jButton6)
-                .addGap(74, 74, 74)
-                .addComponent(jButton7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton8)
-                .addGap(47, 47, 47))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addComponent(jLabel1)
                 .addGap(123, 123, 123)
@@ -216,6 +200,40 @@ public class PVotaciones extends javax.swing.JFrame {
                 .addGap(119, 119, 119)
                 .addComponent(jLabel3)
                 .addGap(71, 71, 71))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jButton3)
+                        .addGap(76, 76, 76)
+                        .addComponent(jButton4)
+                        .addGap(72, 72, 72)
+                        .addComponent(jButton5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jButton6)
+                        .addGap(65, 65, 65)
+                        .addComponent(jButton7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton8)
+                        .addGap(47, 47, 47))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -245,14 +263,15 @@ public class PVotaciones extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton4)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6)
                     .addComponent(jButton7)
-                    .addComponent(jButton8)))
+                    .addComponent(jButton8)
+                    .addComponent(jButton6)
+                    .addComponent(jButton5))
+                .addContainerGap())
         );
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Reprecentante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Representante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -341,7 +360,7 @@ public class PVotaciones extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
