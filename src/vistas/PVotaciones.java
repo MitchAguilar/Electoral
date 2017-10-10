@@ -5,13 +5,18 @@
  */
 package vistas;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author 
+ * @author
  */
 public class PVotaciones extends javax.swing.JFrame {
 
@@ -22,15 +27,17 @@ public class PVotaciones extends javax.swing.JFrame {
         initComponents();
         try {
             Imagen img = new Imagen("/Imagenes/descarga.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-            Imagen img1 = new Imagen("/Imagenes/descarga1.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-            Imagen img2 = new Imagen("/Imagenes/descarga2.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-            Imagen img3 = new Imagen("/Imagenes/descarga3.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-            Imagen img4 = new Imagen("/Imagenes/descarga4.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-            Imagen img5 = new Imagen("/Imagenes/descarga5.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-            Imagen img6 = new Imagen("/Imagenes/descarga6.jpg", jPanel3.getWidth(), jPanel3.getHeight());
-            Imagen img7 = new Imagen("/Imagenes/descarga7.jpg", jPanel3.getWidth(), jPanel3.getHeight());
+            Imagen img1 = new Imagen("/Imagenes/descarga1.jpg", jPanel4.getWidth(), jPanel4.getHeight());
+            Imagen img2 = new Imagen("/Imagenes/descarga2.jpg", jPanel5.getWidth(), jPanel5.getHeight());
+            Imagen img3 = new Imagen("/Imagenes/descarga3.jpg", jPanel6.getWidth(), jPanel6.getHeight());
+            Imagen img4 = new Imagen("/Imagenes/descarga4.jpg", jPanel7.getWidth(), jPanel7.getHeight());
+            Imagen img5 = new Imagen("/Imagenes/descarga5.jpg", jPanel8.getWidth(), jPanel8.getHeight());
+            Imagen img6 = new Imagen("/Imagenes/descarga6.jpg", jPanel9.getWidth(), jPanel9.getHeight());
+            Imagen img7 = new Imagen("/Imagenes/descarga7.jpg", jPanel10.getWidth(), jPanel10.getHeight());
             Imagen img9 = new Imagen("/Imagenes/panit.jpg", getWidth(), getHeight());
-
+//            Imagen img10 = new Imagen("/Imagenes/hojas.jpg", jPanel1.getWidth(), jPanel1.getHeight());
+//
+//            jPanel1.add(img10);
             jPanel3.add(img);
             jPanel4.add(img1);
             jPanel5.add(img2);
@@ -39,7 +46,7 @@ public class PVotaciones extends javax.swing.JFrame {
             jPanel8.add(img5);
             jPanel9.add(img6);
             jPanel10.add(img7);
-            add(img9);  
+            add(img9);
         } catch (Exception io) {
             JOptionPane.showMessageDialog(null, "Ha ocurrido un error, hay archivos faltanates");
         }
@@ -159,16 +166,46 @@ public class PVotaciones extends javax.swing.JFrame {
         );
 
         jButton3.setText("Votar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Votar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Votar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("Votar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setText("Votar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setText("Votar");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("01");
 
@@ -296,8 +333,18 @@ public class PVotaciones extends javax.swing.JFrame {
         );
 
         jButton1.setText("Votar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Votar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("01");
 
@@ -367,6 +414,116 @@ public class PVotaciones extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        try {
+            File arc = new File("C:\\Industrial");
+            if (arc.exists() == false) {
+                arc.mkdir();
+            }
+            String numero = "C:\\Industrial\\Votos.txt";
+            File archivo = null;
+            FileReader fr = null;
+            BufferedReader br = null;
+            FileWriter fichero = null;
+            PrintWriter pw = null;
+            String linea = "";
+            String finali[] = new String[100000];
+            boolean validation = false;
+            try {
+                archivo = new File(numero);
+                fr = new FileReader(archivo);
+                br = new BufferedReader(fr);
+                int num = 0;
+
+                while (true) {
+                    linea = br.readLine();
+                    if (linea == null) {
+                        break;
+                    }
+                    String tamporal[] = linea.split(" ");
+                    if (tamporal[0].equals("P1")) {
+                        int nnnn = Integer.parseInt(tamporal[1].toString());
+                        nnnn++;
+                        finali[num] = tamporal[0] + " " + nnnn;
+                        num++;
+                    } else {
+                        finali[num] = tamporal[0] + " " + tamporal[1];
+                    }
+                    tamporal = null;
+                    num++;
+                }
+                br.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (null != fr) {
+                        fr.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+            //hasta aquí es la lactra
+
+            //escritura
+            try {
+                fichero = new FileWriter(numero);
+                pw = new PrintWriter(fichero);
+                for (int i = 0; i < finali.length; i++) {
+                    if (finali[i] != null) {
+                        pw.append(finali[i]);
+                        pw.println();
+                    }
+                }
+                fichero.close();
+            } catch (Exception e) {
+                System.out.println("hola");
+            } finally {
+                try {
+                    if (null != fichero) {
+                        fichero.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+            JOptionPane.showMessageDialog(null, "Dato Registrado");
+        } catch (Exception io) {
+            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
+        }
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

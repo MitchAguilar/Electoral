@@ -5,6 +5,12 @@
  */
 package vistas;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.concurrent.ExecutionException;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,6 +24,7 @@ public class Profesores extends javax.swing.JFrame {
      */
     public Profesores() {
         initComponents();
+
         try {
             Imagen img = new Imagen("/Imagenes/img2.jpg", getWidth(), getHeight());
             add(img);
@@ -26,7 +33,92 @@ public class Profesores extends javax.swing.JFrame {
         }
         repaint();
         setResizable(false);
+        jLabel9.setText(null);
+        jLabel10.setText(null);
+        jLabel11.setText(null);
+        jLabel12.setText(null);
+        jLabel13.setText(null);
+        jLabel14.setText(null);
+        jLabel15.setText(null);
+        jLabel16.setText(null);
+
         setLocationRelativeTo(null);
+        Mai();
+    }
+
+    public void Mai() {
+        try {
+            File arc = new File("C:\\Industrial");
+            if (arc.exists() == false) {
+                arc.mkdir();
+            }
+            String numero = "C:\\Industrial\\Votos.txt";
+            File archivo = null;
+            FileReader fr = null;
+            BufferedReader br = null;
+            FileWriter fichero = null;
+            PrintWriter pw = null;
+            String linea = "";
+            String finali[] = new String[100000];
+            boolean validation = false;
+            try {
+                archivo = new File(numero);
+                fr = new FileReader(archivo);
+                br = new BufferedReader(fr);
+                int num = 0;
+
+                while (true) {
+                    linea = br.readLine();
+                    if (linea == null) {
+                        break;
+                    }
+                    String tamporal[] = linea.split(" ");
+                    switch (tamporal[0].toString()) {
+                        case "P1":
+                            jLabel9.setText(tamporal[1].toString());
+                            break;
+                        case "P2":
+                            jLabel10.setText(tamporal[1].toString());
+                            break;
+                        case "P3":
+                            jLabel11.setText(tamporal[1].toString());
+                            break;
+                        case "P4":
+                            jLabel12.setText(tamporal[1].toString());
+                            break;
+                        case "P5":
+                            jLabel13.setText(tamporal[1].toString());
+                            break;
+                        case "P6":
+                            jLabel14.setText(tamporal[1].toString());
+                            break;
+                        case "R1":
+                            jLabel15.setText(tamporal[1].toString());
+                            break;
+                        case "R2":
+                            jLabel16.setText(tamporal[1].toString());
+                            break;
+                        default:
+                            JOptionPane.showMessageDialog(null, "Error en lectura de datos");
+                    }
+                }
+                br.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (null != fr) {
+                        fr.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+            //hasta aquí es la lactra
+
+        } catch (Exception io) {
+            JOptionPane.showMessageDialog(null, "Error masivo en la lectura de los datos");
+        }
     }
 
     /**
@@ -65,17 +157,17 @@ public class Profesores extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Personero", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
 
-        jLabel1.setText("Numero 01: ");
+        jLabel1.setText("Número 01: ");
 
-        jLabel2.setText("Numero 02: ");
+        jLabel2.setText("Número 02: ");
 
-        jLabel3.setText("Numero 03: ");
+        jLabel3.setText("Número 03: ");
 
-        jLabel4.setText("Numero 04: ");
+        jLabel4.setText("Número 04: ");
 
-        jLabel5.setText("Numero 05: ");
+        jLabel5.setText("Número 05: ");
 
-        jLabel6.setText("Numero 06: ");
+        jLabel6.setText("Número 06: ");
 
         jLabel9.setText("jLabel9");
 
@@ -152,7 +244,7 @@ public class Profesores extends javax.swing.JFrame {
                 .addContainerGap(45, Short.MAX_VALUE))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Reprecentante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Representante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
 
         jLabel7.setText("Número 01:");
 
@@ -219,16 +311,16 @@ public class Profesores extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10))
+                .addGap(12, 12, 12))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32))
+                .addContainerGap())
         );
 
         pack();
