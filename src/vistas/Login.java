@@ -13,6 +13,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 
 /**
  *
@@ -238,7 +239,8 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        String pass = JOptionPane.showInputDialog(null, "Ingrese la contraseña de administrador: ");
+        JPasswordField psw= new JPasswordField();
+        String pass =JOptionPane.showInputDialog(null,psw,"Ingrese la contraseña de administrador: ");
         if (!pass.isEmpty()) {
             if (!pass.equals("profesor12345")) {
                 JOptionPane.showMessageDialog(null, "Codigo de seguridad incorrecto", "Error", JOptionPane.WARNING_MESSAGE);

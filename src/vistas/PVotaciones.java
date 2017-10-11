@@ -23,6 +23,9 @@ public class PVotaciones extends javax.swing.JFrame {
     /**
      * Creates new form PVotaciones
      */
+    boolean personeros = false;
+    boolean reprecentante = false;
+
     public PVotaciones() {
         initComponents();
         try {
@@ -165,112 +168,96 @@ public class PVotaciones extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jButton3.setText("Votar");
+        jButton3.setText("Elegir");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Votar");
+        jButton4.setText("Elegir");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Votar");
+        jButton5.setText("Elegir");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
 
-        jButton6.setText("Votar");
+        jButton6.setText("Elegir");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
 
-        jButton7.setText("Votar");
+        jButton7.setText("Elegir");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
 
-        jButton8.setText("Votar");
+        jButton8.setText("Elegir");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("01");
+        jLabel1.setText("              01");
 
-        jLabel2.setText("05");
+        jLabel2.setText("              05");
 
-        jLabel3.setText("06");
+        jLabel3.setText("              06");
 
-        jLabel4.setText("02");
+        jLabel4.setText("              02");
 
-        jLabel5.setText("03");
+        jLabel5.setText("              03");
 
-        jLabel6.setText("04");
+        jLabel6.setText("               04");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(jLabel1)
-                .addGap(123, 123, 123)
-                .addComponent(jLabel4)
-                .addGap(124, 124, 124)
-                .addComponent(jLabel5)
-                .addGap(119, 119, 119)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(119, 119, 119)
-                .addComponent(jLabel3)
-                .addGap(71, 71, 71))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jButton3)
-                        .addGap(76, 76, 76)
-                        .addComponent(jButton4)
-                        .addGap(72, 72, 72)
-                        .addComponent(jButton5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jButton6)
-                        .addGap(65, 65, 65)
-                        .addComponent(jButton7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton8)
-                        .addGap(47, 47, 47))))
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(29, 29, 29))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -288,22 +275,24 @@ public class PVotaciones extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(jLabel3)
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton7)
                     .addComponent(jButton8)
-                    .addComponent(jButton6)
-                    .addComponent(jButton5))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton3)
+                        .addComponent(jButton4)
+                        .addComponent(jButton5))
+                    .addComponent(jButton6))
                 .addContainerGap())
         );
 
@@ -314,7 +303,7 @@ public class PVotaciones extends javax.swing.JFrame {
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -325,52 +314,46 @@ public class PVotaciones extends javax.swing.JFrame {
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jButton1.setText("Votar");
+        jButton1.setText("Elegir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Votar");
+        jButton2.setText("Elegir");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jLabel7.setText("01");
+        jLabel7.setText("             01");
 
-        jLabel8.setText("02");
+        jLabel8.setText("              02");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(270, 270, 270)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(128, 128, 128)
-                        .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(jButton1)
-                        .addGap(168, 168, 168)
-                        .addComponent(jButton2))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(312, 312, 312)
-                        .addComponent(jLabel7)
-                        .addGap(215, 215, 215)
-                        .addComponent(jLabel8)))
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(128, 128, 128)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -397,10 +380,12 @@ public class PVotaciones extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(236, 236, 236)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(238, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -414,6 +399,679 @@ public class PVotaciones extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        try {
+            File arc = new File("C:\\Industrial");
+            if (arc.exists() == false) {
+                arc.mkdir();
+            }
+            String numero = "C:\\Industrial\\Votos.txt";
+            File archivo = null;
+            FileReader fr = null;
+            BufferedReader br = null;
+            FileWriter fichero = null;
+            PrintWriter pw = null;
+            String linea = "";
+            String finali[] = new String[100000];
+            boolean validation = false;
+            try {
+                archivo = new File(numero);
+                fr = new FileReader(archivo);
+                br = new BufferedReader(fr);
+                int num = 0;
+
+                while (true) {
+                    linea = br.readLine();
+                    if (linea == null) {
+                        break;
+                    }
+                    String tamporal[] = linea.split(" ");
+                    if (tamporal[0].equals("R1")) {
+                        int nnnn = Integer.parseInt(tamporal[1].toString());
+                        nnnn++;
+                        finali[num] = tamporal[0] + " " + nnnn;
+                        num++;
+                    } else {
+                        finali[num] = tamporal[0] + " " + tamporal[1];
+                    }
+                    tamporal = null;
+                    num++;
+                }
+                br.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (null != fr) {
+                        fr.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+            //hasta aquí es la lactra
+
+            //escritura
+            try {
+                fichero = new FileWriter(numero);
+                pw = new PrintWriter(fichero);
+                for (int i = 0; i < finali.length; i++) {
+                    if (finali[i] != null) {
+                        pw.append(finali[i]);
+                        pw.println();
+                    }
+                }
+                fichero.close();
+            } catch (Exception e) {
+                System.out.println("hola");
+            } finally {
+                try {
+                    if (null != fichero) {
+                        fichero.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+        } catch (Exception io) {
+            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
+        }
+
+        int show = JOptionPane.YES_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Estás totalmente seguro de elegir a ésta persona?", "Warning", show);
+        if (dialogResult == 0) {
+            for (int i = 0; i < jPanel2.getComponents().length; i++) {
+                jPanel2.getComponent(i).setEnabled(false);
+            }
+            JOptionPane.showMessageDialog(null, "Voto Registrado");
+        if (personeros) {
+            dispose();
+            Login lg = new Login();
+            lg.setVisible(true);
+        } else {
+            reprecentante = true;
+        }
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        try {
+            File arc = new File("C:\\Industrial");
+            if (arc.exists() == false) {
+                arc.mkdir();
+            }
+            String numero = "C:\\Industrial\\Votos.txt";
+            File archivo = null;
+            FileReader fr = null;
+            BufferedReader br = null;
+            FileWriter fichero = null;
+            PrintWriter pw = null;
+            String linea = "";
+            String finali[] = new String[100000];
+            boolean validation = false;
+            try {
+                archivo = new File(numero);
+                fr = new FileReader(archivo);
+                br = new BufferedReader(fr);
+                int num = 0;
+
+                while (true) {
+                    linea = br.readLine();
+                    if (linea == null) {
+                        break;
+                    }
+                    String tamporal[] = linea.split(" ");
+                    if (tamporal[0].equals("R2")) {
+                        int nnnn = Integer.parseInt(tamporal[1].toString());
+                        nnnn++;
+                        finali[num] = tamporal[0] + " " + nnnn;
+                        num++;
+                    } else {
+                        finali[num] = tamporal[0] + " " + tamporal[1];
+                    }
+                    tamporal = null;
+                    num++;
+                }
+                br.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (null != fr) {
+                        fr.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+            //hasta aquí es la lactra
+
+            //escritura
+            try {
+                fichero = new FileWriter(numero);
+                pw = new PrintWriter(fichero);
+                for (int i = 0; i < finali.length; i++) {
+                    if (finali[i] != null) {
+                        pw.append(finali[i]);
+                        pw.println();
+                    }
+                }
+                fichero.close();
+            } catch (Exception e) {
+                System.out.println("hola");
+            } finally {
+                try {
+                    if (null != fichero) {
+                        fichero.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+        } catch (Exception io) {
+            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
+        }
+
+        int show = JOptionPane.YES_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Estás totalmente seguro de elegir a ésta persona?", "Warning", show);
+        if (dialogResult == 0) {
+            for (int i = 0; i < jPanel2.getComponents().length; i++) {
+                jPanel2.getComponent(i).setEnabled(false);
+            }
+            JOptionPane.showMessageDialog(null, "Voto Registrado");
+            if (personeros) {
+                dispose();
+                Login lg = new Login();
+                lg.setVisible(true);
+            } else {
+                reprecentante = true;
+            }
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        try {
+            File arc = new File("C:\\Industrial");
+            if (arc.exists() == false) {
+                arc.mkdir();
+            }
+            String numero = "C:\\Industrial\\Votos.txt";
+            File archivo = null;
+            FileReader fr = null;
+            BufferedReader br = null;
+            FileWriter fichero = null;
+            PrintWriter pw = null;
+            String linea = "";
+            String finali[] = new String[100000];
+            boolean validation = false;
+            try {
+                archivo = new File(numero);
+                fr = new FileReader(archivo);
+                br = new BufferedReader(fr);
+                int num = 0;
+
+                while (true) {
+                    linea = br.readLine();
+                    if (linea == null) {
+                        break;
+                    }
+                    String tamporal[] = linea.split(" ");
+                    if (tamporal[0].equals("P6")) {
+                        int nnnn = Integer.parseInt(tamporal[1].toString());
+                        nnnn++;
+                        finali[num] = tamporal[0] + " " + nnnn;
+                        num++;
+                    } else {
+                        finali[num] = tamporal[0] + " " + tamporal[1];
+                    }
+                    tamporal = null;
+                    num++;
+                }
+                br.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (null != fr) {
+                        fr.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+            //hasta aquí es la lactra
+
+            //escritura
+            try {
+                fichero = new FileWriter(numero);
+                pw = new PrintWriter(fichero);
+                for (int i = 0; i < finali.length; i++) {
+                    if (finali[i] != null) {
+                        pw.append(finali[i]);
+                        pw.println();
+                    }
+                }
+                fichero.close();
+            } catch (Exception e) {
+                System.out.println("hola");
+            } finally {
+                try {
+                    if (null != fichero) {
+                        fichero.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+        } catch (Exception io) {
+            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
+        }
+
+        int show = JOptionPane.YES_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Estás totalmente seguro de elegir a ésta persona?", "Warning", show);
+        if (dialogResult == 0) {
+            for (int i = 0; i < jPanel1.getComponents().length; i++) {
+                jPanel1.getComponent(i).setEnabled(false);
+            }
+            JOptionPane.showMessageDialog(null, "Voto Registrado");
+        if (reprecentante) {
+            dispose();
+            Login lg = new Login();
+            lg.setVisible(true);
+        } else {
+            personeros = true;
+        }
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        try {
+            File arc = new File("C:\\Industrial");
+            if (arc.exists() == false) {
+                arc.mkdir();
+            }
+            String numero = "C:\\Industrial\\Votos.txt";
+            File archivo = null;
+            FileReader fr = null;
+            BufferedReader br = null;
+            FileWriter fichero = null;
+            PrintWriter pw = null;
+            String linea = "";
+            String finali[] = new String[100000];
+            boolean validation = false;
+            try {
+                archivo = new File(numero);
+                fr = new FileReader(archivo);
+                br = new BufferedReader(fr);
+                int num = 0;
+
+                while (true) {
+                    linea = br.readLine();
+                    if (linea == null) {
+                        break;
+                    }
+                    String tamporal[] = linea.split(" ");
+                    if (tamporal[0].equals("P5")) {
+                        int nnnn = Integer.parseInt(tamporal[1].toString());
+                        nnnn++;
+                        finali[num] = tamporal[0] + " " + nnnn;
+                        num++;
+                    } else {
+                        finali[num] = tamporal[0] + " " + tamporal[1];
+                    }
+                    tamporal = null;
+                    num++;
+                }
+                br.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (null != fr) {
+                        fr.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+            //hasta aquí es la lactra
+
+            //escritura
+            try {
+                fichero = new FileWriter(numero);
+                pw = new PrintWriter(fichero);
+                for (int i = 0; i < finali.length; i++) {
+                    if (finali[i] != null) {
+                        pw.append(finali[i]);
+                        pw.println();
+                    }
+                }
+                fichero.close();
+            } catch (Exception e) {
+                System.out.println("hola");
+            } finally {
+                try {
+                    if (null != fichero) {
+                        fichero.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+        } catch (Exception io) {
+            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
+        }
+
+        int show = JOptionPane.YES_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Estás totalmente seguro de elegir a ésta persona?", "Warning", show);
+        if (dialogResult == 0) {
+            for (int i = 0; i < jPanel1.getComponents().length; i++) {
+                jPanel1.getComponent(i).setEnabled(false);
+            }
+            JOptionPane.showMessageDialog(null, "Voto Registrado");
+        if (reprecentante) {
+            dispose();
+            Login lg = new Login();
+            lg.setVisible(true);
+        } else {
+            personeros = true;
+        }
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        try {
+            File arc = new File("C:\\Industrial");
+            if (arc.exists() == false) {
+                arc.mkdir();
+            }
+            String numero = "C:\\Industrial\\Votos.txt";
+            File archivo = null;
+            FileReader fr = null;
+            BufferedReader br = null;
+            FileWriter fichero = null;
+            PrintWriter pw = null;
+            String linea = "";
+            String finali[] = new String[100000];
+            boolean validation = false;
+            try {
+                archivo = new File(numero);
+                fr = new FileReader(archivo);
+                br = new BufferedReader(fr);
+                int num = 0;
+
+                while (true) {
+                    linea = br.readLine();
+                    if (linea == null) {
+                        break;
+                    }
+                    String tamporal[] = linea.split(" ");
+                    if (tamporal[0].equals("P4")) {
+                        int nnnn = Integer.parseInt(tamporal[1].toString());
+                        nnnn++;
+                        finali[num] = tamporal[0] + " " + nnnn;
+                        num++;
+                    } else {
+                        finali[num] = tamporal[0] + " " + tamporal[1];
+                    }
+                    tamporal = null;
+                    num++;
+                }
+                br.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (null != fr) {
+                        fr.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+            //hasta aquí es la lactra
+
+            //escritura
+            try {
+                fichero = new FileWriter(numero);
+                pw = new PrintWriter(fichero);
+                for (int i = 0; i < finali.length; i++) {
+                    if (finali[i] != null) {
+                        pw.append(finali[i]);
+                        pw.println();
+                    }
+                }
+                fichero.close();
+            } catch (Exception e) {
+                System.out.println("hola");
+            } finally {
+                try {
+                    if (null != fichero) {
+                        fichero.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+        } catch (Exception io) {
+            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
+        }
+
+        int show = JOptionPane.YES_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Estás totalmente seguro de elegir a ésta persona?", "Warning", show);
+        if (dialogResult == 0) {
+            for (int i = 0; i < jPanel1.getComponents().length; i++) {
+                jPanel1.getComponent(i).setEnabled(false);
+            }
+            JOptionPane.showMessageDialog(null, "Voto Registrado");
+        if (reprecentante) {
+            dispose();
+            Login lg = new Login();
+            lg.setVisible(true);
+        } else {
+            personeros = true;
+        }
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        try {
+            File arc = new File("C:\\Industrial");
+            if (arc.exists() == false) {
+                arc.mkdir();
+            }
+            String numero = "C:\\Industrial\\Votos.txt";
+            File archivo = null;
+            FileReader fr = null;
+            BufferedReader br = null;
+            FileWriter fichero = null;
+            PrintWriter pw = null;
+            String linea = "";
+            String finali[] = new String[100000];
+            boolean validation = false;
+            try {
+                archivo = new File(numero);
+                fr = new FileReader(archivo);
+                br = new BufferedReader(fr);
+                int num = 0;
+
+                while (true) {
+                    linea = br.readLine();
+                    if (linea == null) {
+                        break;
+                    }
+                    String tamporal[] = linea.split(" ");
+                    if (tamporal[0].equals("P3")) {
+                        int nnnn = Integer.parseInt(tamporal[1].toString());
+                        nnnn++;
+                        finali[num] = tamporal[0] + " " + nnnn;
+                        num++;
+                    } else {
+                        finali[num] = tamporal[0] + " " + tamporal[1];
+                    }
+                    tamporal = null;
+                    num++;
+                }
+                br.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (null != fr) {
+                        fr.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+            //hasta aquí es la lactra
+
+            //escritura
+            try {
+                fichero = new FileWriter(numero);
+                pw = new PrintWriter(fichero);
+                for (int i = 0; i < finali.length; i++) {
+                    if (finali[i] != null) {
+                        pw.append(finali[i]);
+                        pw.println();
+                    }
+                }
+                fichero.close();
+            } catch (Exception e) {
+                System.out.println("hola");
+            } finally {
+                try {
+                    if (null != fichero) {
+                        fichero.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+        } catch (Exception io) {
+            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
+        }
+
+        int show = JOptionPane.YES_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Estás totalmente seguro de elegir a ésta persona?", "Warning", show);
+        if (dialogResult == 0) {
+            for (int i = 0; i < jPanel1.getComponents().length; i++) {
+                jPanel1.getComponent(i).setEnabled(false);
+            }
+            JOptionPane.showMessageDialog(null, "Voto Registrado");
+            if (reprecentante) {
+                dispose();
+                Login lg = new Login();
+                lg.setVisible(true);
+            } else {
+                personeros = true;
+            }
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        try {
+            File arc = new File("C:\\Industrial");
+            if (arc.exists() == false) {
+                arc.mkdir();
+            }
+            String numero = "C:\\Industrial\\Votos.txt";
+            File archivo = null;
+            FileReader fr = null;
+            BufferedReader br = null;
+            FileWriter fichero = null;
+            PrintWriter pw = null;
+            String linea = "";
+            String finali[] = new String[100000];
+            boolean validation = false;
+            try {
+                archivo = new File(numero);
+                fr = new FileReader(archivo);
+                br = new BufferedReader(fr);
+                int num = 0;
+
+                while (true) {
+                    linea = br.readLine();
+                    if (linea == null) {
+                        break;
+                    }
+                    String tamporal[] = linea.split(" ");
+                    if (tamporal[0].equals("P2")) {
+                        int nnnn = Integer.parseInt(tamporal[1].toString());
+                        nnnn++;
+                        finali[num] = tamporal[0] + " " + nnnn;
+                        num++;
+                    } else {
+                        finali[num] = tamporal[0] + " " + tamporal[1];
+                    }
+                    tamporal = null;
+                    num++;
+                }
+                br.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (null != fr) {
+                        fr.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+            //hasta aquí es la lactra
+
+            //escritura
+            try {
+                fichero = new FileWriter(numero);
+                pw = new PrintWriter(fichero);
+                for (int i = 0; i < finali.length; i++) {
+                    if (finali[i] != null) {
+                        pw.append(finali[i]);
+                        pw.println();
+                    }
+                }
+                fichero.close();
+            } catch (Exception e) {
+                System.out.println("hola");
+            } finally {
+                try {
+                    if (null != fichero) {
+                        fichero.close();
+                    }
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+        } catch (Exception io) {
+            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
+        }
+
+        int show = JOptionPane.YES_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Estás totalmente seguro de elegir a ésta persona?", "Warning", show);
+        if (dialogResult == 0) {
+            for (int i = 0; i < jPanel1.getComponents().length; i++) {
+                jPanel1.getComponent(i).setEnabled(false);
+            }
+            JOptionPane.showMessageDialog(null, "Voto Registrado");
+            if (reprecentante) {
+                dispose();
+                Login lg = new Login();
+                lg.setVisible(true);
+            } else {
+                personeros = true;
+            }
+        }
+
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -490,603 +1148,27 @@ public class PVotaciones extends javax.swing.JFrame {
                     e2.printStackTrace();
                 }
             }
-            JOptionPane.showMessageDialog(null, "Dato Registrado");
-            dispose();
-            Login lg= new Login();
-            lg.setVisible(true);
         } catch (Exception io) {
             JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
         }
 
+        int show = JOptionPane.YES_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Estás totalmente seguro de elegir a ésta persona?", "Warning", show);
+        if (dialogResult == 0) {
+            for (int i = 0; i < jPanel1.getComponents().length; i++) {
+                jPanel1.getComponent(i).setEnabled(false);
+            }
+            JOptionPane.showMessageDialog(null, "Voto Registrado");
+            if (reprecentante) {
+                dispose();
+                Login lg = new Login();
+                lg.setVisible(true);
+                System.out.println("smdlmflñdmfld");
+            } else {
+                personeros = true;
+            }
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-         try {
-            File arc = new File("C:\\Industrial");
-            if (arc.exists() == false) {
-                arc.mkdir();
-            }
-            String numero = "C:\\Industrial\\Votos.txt";
-            File archivo = null;
-            FileReader fr = null;
-            BufferedReader br = null;
-            FileWriter fichero = null;
-            PrintWriter pw = null;
-            String linea = "";
-            String finali[] = new String[100000];
-            boolean validation = false;
-            try {
-                archivo = new File(numero);
-                fr = new FileReader(archivo);
-                br = new BufferedReader(fr);
-                int num = 0;
-
-                while (true) {
-                    linea = br.readLine();
-                    if (linea == null) {
-                        break;
-                    }
-                    String tamporal[] = linea.split(" ");
-                    if (tamporal[0].equals("P2")) {
-                        int nnnn = Integer.parseInt(tamporal[1].toString());
-                        nnnn++;
-                        finali[num] = tamporal[0] + " " + nnnn;
-                        num++;
-                    } else {
-                        finali[num] = tamporal[0] + " " + tamporal[1];
-                    }
-                    tamporal = null;
-                    num++;
-                }
-                br.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    if (null != fr) {
-                        fr.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            //hasta aquí es la lactra
-
-            //escritura
-            try {
-                fichero = new FileWriter(numero);
-                pw = new PrintWriter(fichero);
-                for (int i = 0; i < finali.length; i++) {
-                    if (finali[i] != null) {
-                        pw.append(finali[i]);
-                        pw.println();
-                    }
-                }
-                fichero.close();
-            } catch (Exception e) {
-                System.out.println("hola");
-            } finally {
-                try {
-                    if (null != fichero) {
-                        fichero.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            JOptionPane.showMessageDialog(null, "Dato Registrado");
-            dispose();
-            Login lg= new Login();
-            lg.setVisible(true);
-        } catch (Exception io) {
-            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
-        }
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-         try {
-            File arc = new File("C:\\Industrial");
-            if (arc.exists() == false) {
-                arc.mkdir();
-            }
-            String numero = "C:\\Industrial\\Votos.txt";
-            File archivo = null;
-            FileReader fr = null;
-            BufferedReader br = null;
-            FileWriter fichero = null;
-            PrintWriter pw = null;
-            String linea = "";
-            String finali[] = new String[100000];
-            boolean validation = false;
-            try {
-                archivo = new File(numero);
-                fr = new FileReader(archivo);
-                br = new BufferedReader(fr);
-                int num = 0;
-
-                while (true) {
-                    linea = br.readLine();
-                    if (linea == null) {
-                        break;
-                    }
-                    String tamporal[] = linea.split(" ");
-                    if (tamporal[0].equals("P3")) {
-                        int nnnn = Integer.parseInt(tamporal[1].toString());
-                        nnnn++;
-                        finali[num] = tamporal[0] + " " + nnnn;
-                        num++;
-                    } else {
-                        finali[num] = tamporal[0] + " " + tamporal[1];
-                    }
-                    tamporal = null;
-                    num++;
-                }
-                br.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    if (null != fr) {
-                        fr.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            //hasta aquí es la lactra
-
-            //escritura
-            try {
-                fichero = new FileWriter(numero);
-                pw = new PrintWriter(fichero);
-                for (int i = 0; i < finali.length; i++) {
-                    if (finali[i] != null) {
-                        pw.append(finali[i]);
-                        pw.println();
-                    }
-                }
-                fichero.close();
-            } catch (Exception e) {
-                System.out.println("hola");
-            } finally {
-                try {
-                    if (null != fichero) {
-                        fichero.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            JOptionPane.showMessageDialog(null, "Dato Registrado");
-            dispose();
-            Login lg= new Login();
-            lg.setVisible(true);
-        } catch (Exception io) {
-            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
-        }
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-         try {
-            File arc = new File("C:\\Industrial");
-            if (arc.exists() == false) {
-                arc.mkdir();
-            }
-            String numero = "C:\\Industrial\\Votos.txt";
-            File archivo = null;
-            FileReader fr = null;
-            BufferedReader br = null;
-            FileWriter fichero = null;
-            PrintWriter pw = null;
-            String linea = "";
-            String finali[] = new String[100000];
-            boolean validation = false;
-            try {
-                archivo = new File(numero);
-                fr = new FileReader(archivo);
-                br = new BufferedReader(fr);
-                int num = 0;
-
-                while (true) {
-                    linea = br.readLine();
-                    if (linea == null) {
-                        break;
-                    }
-                    String tamporal[] = linea.split(" ");
-                    if (tamporal[0].equals("P4")) {
-                        int nnnn = Integer.parseInt(tamporal[1].toString());
-                        nnnn++;
-                        finali[num] = tamporal[0] + " " + nnnn;
-                        num++;
-                    } else {
-                        finali[num] = tamporal[0] + " " + tamporal[1];
-                    }
-                    tamporal = null;
-                    num++;
-                }
-                br.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    if (null != fr) {
-                        fr.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            //hasta aquí es la lactra
-
-            //escritura
-            try {
-                fichero = new FileWriter(numero);
-                pw = new PrintWriter(fichero);
-                for (int i = 0; i < finali.length; i++) {
-                    if (finali[i] != null) {
-                        pw.append(finali[i]);
-                        pw.println();
-                    }
-                }
-                fichero.close();
-            } catch (Exception e) {
-                System.out.println("hola");
-            } finally {
-                try {
-                    if (null != fichero) {
-                        fichero.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            JOptionPane.showMessageDialog(null, "Dato Registrado");
-            dispose();
-            Login lg= new Login();
-            lg.setVisible(true);
-        } catch (Exception io) {
-            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
-        }
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-         try {
-            File arc = new File("C:\\Industrial");
-            if (arc.exists() == false) {
-                arc.mkdir();
-            }
-            String numero = "C:\\Industrial\\Votos.txt";
-            File archivo = null;
-            FileReader fr = null;
-            BufferedReader br = null;
-            FileWriter fichero = null;
-            PrintWriter pw = null;
-            String linea = "";
-            String finali[] = new String[100000];
-            boolean validation = false;
-            try {
-                archivo = new File(numero);
-                fr = new FileReader(archivo);
-                br = new BufferedReader(fr);
-                int num = 0;
-
-                while (true) {
-                    linea = br.readLine();
-                    if (linea == null) {
-                        break;
-                    }
-                    String tamporal[] = linea.split(" ");
-                    if (tamporal[0].equals("P5")) {
-                        int nnnn = Integer.parseInt(tamporal[1].toString());
-                        nnnn++;
-                        finali[num] = tamporal[0] + " " + nnnn;
-                        num++;
-                    } else {
-                        finali[num] = tamporal[0] + " " + tamporal[1];
-                    }
-                    tamporal = null;
-                    num++;
-                }
-                br.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    if (null != fr) {
-                        fr.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            //hasta aquí es la lactra
-
-            //escritura
-            try {
-                fichero = new FileWriter(numero);
-                pw = new PrintWriter(fichero);
-                for (int i = 0; i < finali.length; i++) {
-                    if (finali[i] != null) {
-                        pw.append(finali[i]);
-                        pw.println();
-                    }
-                }
-                fichero.close();
-            } catch (Exception e) {
-                System.out.println("hola");
-            } finally {
-                try {
-                    if (null != fichero) {
-                        fichero.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            JOptionPane.showMessageDialog(null, "Dato Registrado");
-            dispose();
-            Login lg= new Login();
-            lg.setVisible(true);
-        } catch (Exception io) {
-            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
-        }
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-         try {
-            File arc = new File("C:\\Industrial");
-            if (arc.exists() == false) {
-                arc.mkdir();
-            }
-            String numero = "C:\\Industrial\\Votos.txt";
-            File archivo = null;
-            FileReader fr = null;
-            BufferedReader br = null;
-            FileWriter fichero = null;
-            PrintWriter pw = null;
-            String linea = "";
-            String finali[] = new String[100000];
-            boolean validation = false;
-            try {
-                archivo = new File(numero);
-                fr = new FileReader(archivo);
-                br = new BufferedReader(fr);
-                int num = 0;
-
-                while (true) {
-                    linea = br.readLine();
-                    if (linea == null) {
-                        break;
-                    }
-                    String tamporal[] = linea.split(" ");
-                    if (tamporal[0].equals("P6")) {
-                        int nnnn = Integer.parseInt(tamporal[1].toString());
-                        nnnn++;
-                        finali[num] = tamporal[0] + " " + nnnn;
-                        num++;
-                    } else {
-                        finali[num] = tamporal[0] + " " + tamporal[1];
-                    }
-                    tamporal = null;
-                    num++;
-                }
-                br.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    if (null != fr) {
-                        fr.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            //hasta aquí es la lactra
-
-            //escritura
-            try {
-                fichero = new FileWriter(numero);
-                pw = new PrintWriter(fichero);
-                for (int i = 0; i < finali.length; i++) {
-                    if (finali[i] != null) {
-                        pw.append(finali[i]);
-                        pw.println();
-                    }
-                }
-                fichero.close();
-            } catch (Exception e) {
-                System.out.println("hola");
-            } finally {
-                try {
-                    if (null != fichero) {
-                        fichero.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            JOptionPane.showMessageDialog(null, "Dato Registrado");
-            dispose();
-            Login lg= new Login();
-            lg.setVisible(true);
-        } catch (Exception io) {
-            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
-        }
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-         try {
-            File arc = new File("C:\\Industrial");
-            if (arc.exists() == false) {
-                arc.mkdir();
-            }
-            String numero = "C:\\Industrial\\Votos.txt";
-            File archivo = null;
-            FileReader fr = null;
-            BufferedReader br = null;
-            FileWriter fichero = null;
-            PrintWriter pw = null;
-            String linea = "";
-            String finali[] = new String[100000];
-            boolean validation = false;
-            try {
-                archivo = new File(numero);
-                fr = new FileReader(archivo);
-                br = new BufferedReader(fr);
-                int num = 0;
-
-                while (true) {
-                    linea = br.readLine();
-                    if (linea == null) {
-                        break;
-                    }
-                    String tamporal[] = linea.split(" ");
-                    if (tamporal[0].equals("R1")) {
-                        int nnnn = Integer.parseInt(tamporal[1].toString());
-                        nnnn++;
-                        finali[num] = tamporal[0] + " " + nnnn;
-                        num++;
-                    } else {
-                        finali[num] = tamporal[0] + " " + tamporal[1];
-                    }
-                    tamporal = null;
-                    num++;
-                }
-                br.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    if (null != fr) {
-                        fr.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            //hasta aquí es la lactra
-
-            //escritura
-            try {
-                fichero = new FileWriter(numero);
-                pw = new PrintWriter(fichero);
-                for (int i = 0; i < finali.length; i++) {
-                    if (finali[i] != null) {
-                        pw.append(finali[i]);
-                        pw.println();
-                    }
-                }
-                fichero.close();
-            } catch (Exception e) {
-                System.out.println("hola");
-            } finally {
-                try {
-                    if (null != fichero) {
-                        fichero.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            JOptionPane.showMessageDialog(null, "Dato Registrado");
-            dispose();
-            Login lg= new Login();
-            lg.setVisible(true);
-        } catch (Exception io) {
-            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-         try {
-            File arc = new File("C:\\Industrial");
-            if (arc.exists() == false) {
-                arc.mkdir();
-            }
-            String numero = "C:\\Industrial\\Votos.txt";
-            File archivo = null;
-            FileReader fr = null;
-            BufferedReader br = null;
-            FileWriter fichero = null;
-            PrintWriter pw = null;
-            String linea = "";
-            String finali[] = new String[100000];
-            boolean validation = false;
-            try {
-                archivo = new File(numero);
-                fr = new FileReader(archivo);
-                br = new BufferedReader(fr);
-                int num = 0;
-
-                while (true) {
-                    linea = br.readLine();
-                    if (linea == null) {
-                        break;
-                    }
-                    String tamporal[] = linea.split(" ");
-                    if (tamporal[0].equals("R2")) {
-                        int nnnn = Integer.parseInt(tamporal[1].toString());
-                        nnnn++;
-                        finali[num] = tamporal[0] + " " + nnnn;
-                        num++;
-                    } else {
-                        finali[num] = tamporal[0] + " " + tamporal[1];
-                    }
-                    tamporal = null;
-                    num++;
-                }
-                br.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    if (null != fr) {
-                        fr.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            //hasta aquí es la lactra
-
-            //escritura
-            try {
-                fichero = new FileWriter(numero);
-                pw = new PrintWriter(fichero);
-                for (int i = 0; i < finali.length; i++) {
-                    if (finali[i] != null) {
-                        pw.append(finali[i]);
-                        pw.println();
-                    }
-                }
-                fichero.close();
-            } catch (Exception e) {
-                System.out.println("hola");
-            } finally {
-                try {
-                    if (null != fichero) {
-                        fichero.close();
-                    }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
-                }
-            }
-            JOptionPane.showMessageDialog(null, "Dato Registrado");
-            dispose();
-            Login lg= new Login();
-            lg.setVisible(true);
-        } catch (Exception io) {
-            JOptionPane.showMessageDialog(null, "Es posible que no esté debidamente ingresada la basde de datos, si es ése el caso, recomendamos que la ingrese.");
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
