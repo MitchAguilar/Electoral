@@ -99,8 +99,13 @@ public class Profesores extends javax.swing.JFrame {
                         case "R2":
                             jLabel16.setText(tamporal[1].toString());
                             break;
+                            
+                        case"R3":
+                            jLabel18.setText(tamporal[1].toString());
+                            break;
                         default:
                             JOptionPane.showMessageDialog(null, "Error en lectura de datos");
+                            break;
                     }
                 }
                 br.close();
@@ -150,14 +155,16 @@ public class Profesores extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(102, 102, 102));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Total Votos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Total Votos", 0, 0, new java.awt.Font("Dialog", 0, 14))); // NOI18N
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Personero", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Personero"));
 
         jLabel1.setText("Número 01: ");
 
@@ -169,7 +176,7 @@ public class Profesores extends javax.swing.JFrame {
 
         jLabel5.setText("Número 05: ");
 
-        jLabel6.setText("Número 06: ");
+        jLabel6.setText("Blanco:");
 
         jLabel9.setText("jLabel9");
 
@@ -246,7 +253,7 @@ public class Profesores extends javax.swing.JFrame {
                 .addContainerGap(45, Short.MAX_VALUE))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Representante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Representante"));
 
         jLabel7.setText("Número 01:");
 
@@ -255,6 +262,10 @@ public class Profesores extends javax.swing.JFrame {
         jLabel15.setText("jLabel15");
 
         jLabel16.setText("jLabel16");
+
+        jLabel17.setText("Blanco:");
+
+        jLabel18.setText("jLabel18");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -268,9 +279,13 @@ public class Profesores extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel15))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel8)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel17))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel16)))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel16))))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -280,10 +295,14 @@ public class Profesores extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(jLabel15))
-                .addGap(79, 79, 79)
+                .addGap(39, 39, 39)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jLabel16))
+                .addGap(42, 42, 42)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel18))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -309,7 +328,7 @@ public class Profesores extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(12, 12, 410, 320);
+        jPanel1.setBounds(12, 12, 410, 333);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -359,6 +378,8 @@ public class Profesores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
